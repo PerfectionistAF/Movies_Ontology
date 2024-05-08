@@ -1,0 +1,160 @@
+___________________________________________________________________________________________________
+Query 1: Extracts the names, ages, and nationalities of actors whose names start with letters A-M.
+___________________________________________________________________________________________________
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+
+SELECT DISTINCT ?name ?age ?nationality
+WHERE {
+      ?actor rdf:type ont:Actor.
+      ?actor ont:name ?name.
+      OPTIONAL {
+           ?actor ont:age ?age
+      }
+      OPTIONAL {
+           ?actor ont:nationality ?nationality
+      }
+      FILTER(REGEX(?name, "^[A-M]"))
+}
+
+___________________________________________________________________________________________________
+Query 2: Retrieves titles, years, genre names, actor names, and director names for movies released 
+before 2010 and categorized as Action or Thriller, along with the count of genres for each movie.
+___________________________________________________________________________________________________
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+
+SELECT  ?title ?year ?genre_name ?actor_name ?director_name (COUNT(?genre) AS ?genre_count)
+WHERE {
+    ?movie rdf:type ont:Movie.
+    ?movie ont:title ?title.
+    ?movie ont:year ?year.
+    ?movie ont:hasGenre ?genre.
+    ?genre ont:genre ?genre_name.
+    {
+      ?movie ont:hasActor ?actor_name.
+    }
+    UNION
+    {
+      ?movie ont:hasDirector ?director_name.
+    }
+    FILTER(?year < 2010 && (?genre_name = "Action" || ?genre_name = "Thriller"))
+}
+GROUP BY ?title ?year ?genre_name ?actor_name ?director_name
+
+___________________________________________________________________________________________________
+Query 3:Constructs a new RDF graph containing individuals who are both actors and directors.
+___________________________________________________________________________________________________
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+CONSTRUCT {
+    ?person rdf:type ont:Actor;
+    rdf:type ont:Director .
+}
+WHERE {
+    {
+      ?person rdf:type ont:Actor .
+    }
+    UNION
+    {
+      ?person rdf:type ont:Director .
+    }
+}
+
+___________________________________________________________________________________________________
+Query 6: Count movies with both "Comedy" and "Drama" genres, excluding those released before 2005.
+___________________________________________________________________________________________________
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+
+SELECT (COUNT(?movie) AS ?count)
+WHERE {
+  ?movie rdf:type ont:Movie ;
+         ont:hasGenre ?genre ;
+         ont:year ?year .
+  FILTER((?genre = ont:Comedy) || (?genre = ont:Drama) && ?year >= 2005)
+}
+
+___________________________________________________________________________________________________
+Query 7: Fetches titles and release dates of movies released after January 1, 2000.
+___________________________________________________________________________________________________
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+
+SELECT ?title ?release_date
+WHERE {
+  ?movie rdf:type ont:Movie ;
+         ont:title ?title ;
+         ont:year ?release_date .
+  FILTER(STR(?release_date) > "2000-01-01")
+}
+
+___________________________________________________________________________________________________
+Query 8: Retrieve all movies written by writers who are also actors.
+___________________________________________________________________________________________________
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+
+SELECT ?movie ?writer_actor
+WHERE {
+  ?movie rdf:type ont:Movie ;
+         ont:hasWriter ?writer ;
+         ont:hasActor ?writer_actor .
+  ?writer_actor rdf:type ont:Actor ;
+                ont:name ?name .
+  ?writer rdf:type ont:Writer ;
+          ont:name ?name .
+}
+
+___________________________________________________________________________________________________
+Query 9: Retrieve all movies released in the 21st century along with their titles and genres.
+___________________________________________________________________________________________________
+
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+
+SELECT ?movie ?title ?genre
+WHERE {
+  ?movie rdf:type ont:Movie ;
+         ont:title ?title ;
+         ont:hasGenre ?genre ;
+         ont:year ?year .
+  FILTER(?year >= 2000 && ?year < 2100)
+}
+
+___________________________________________________________________________________________________
+Query 10: List all actors who have appeared in movies directed by themselves, along with their names.
+___________________________________________________________________________________________________
+
+PREFIX ont: <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#>
+
+SELECT DISTINCT ?actor ?name
+WHERE {
+  ?actor rdf:type ont:Actor ;
+         ont:name ?name ;
+         ont:isActorOf ?movie .
+  ?movie ont:hasDirector ?actor .
+}
+
