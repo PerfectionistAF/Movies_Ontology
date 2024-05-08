@@ -1335,7 +1335,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Mario_Puzo"/>
-        <Literal>deceased</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#gender"/>
@@ -1355,7 +1355,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
         <NamedIndividual IRI="#Marlon_Brando"/>
-        <Literal>deceased</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#gender"/>
@@ -1870,7 +1870,7 @@
             <DataProperty IRI="#age"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
                     <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
@@ -1887,6 +1887,14 @@
     <DataPropertyDomain>
         <DataProperty IRI="#gender"/>
         <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="#gender"/>
+                <Literal>Female</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#gender"/>
+                <Literal>Male</Literal>
+            </DataHasValue>
             <DataHasValue>
                 <DataProperty IRI="#gender"/>
                 <Literal>female</Literal>
@@ -1936,10 +1944,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#age"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#age"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#country"/>
