@@ -35,35 +35,36 @@ def search_movies():
 
 # Create main window
 root = tk.Tk()
+root.geometry("420x420")
 root.title("Movie Search")
 
 # Create labels and entry fields for user input
-included_actors_label = ttk.Label(root, text="Included Actors (comma-separated):")
+included_actors_label = ttk.Label(root, text="Included Actors (csv):")
 included_actors_label.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 included_actors_entry = ttk.Entry(root)
 included_actors_entry.grid(row=0, column=1, padx=5, pady=5)
 
-excluded_actors_label = ttk.Label(root, text="Excluded Actors (comma-separated):")
+excluded_actors_label = ttk.Label(root, text="Excluded Actors (csv):")
 excluded_actors_label.grid(row=1, column=0, padx=5, pady=5, sticky="w")
 excluded_actors_entry = ttk.Entry(root)
 excluded_actors_entry.grid(row=1, column=1, padx=5, pady=5)
 
-included_directors_label = ttk.Label(root, text="Included Directors (comma-separated):")
+included_directors_label = ttk.Label(root, text="Included Directors (csv):")
 included_directors_label.grid(row=2, column=0, padx=5, pady=5, sticky="w")
 included_directors_entry = ttk.Entry(root)
 included_directors_entry.grid(row=2, column=1, padx=5, pady=5)
 
-excluded_directors_label = ttk.Label(root, text="Excluded Directors (comma-separated):")
+excluded_directors_label = ttk.Label(root, text="Excluded Directors (csv):")
 excluded_directors_label.grid(row=3, column=0, padx=5, pady=5, sticky="w")
 excluded_directors_entry = ttk.Entry(root)
 excluded_directors_entry.grid(row=3, column=1, padx=5, pady=5)
 
-included_genres_label = ttk.Label(root, text="Included Genres (comma-separated):")
+included_genres_label = ttk.Label(root, text="Included Genres (csv):")
 included_genres_label.grid(row=4, column=0, padx=5, pady=5, sticky="w")
 included_genres_entry = ttk.Entry(root)
 included_genres_entry.grid(row=4, column=1, padx=5, pady=5)
 
-excluded_genres_label = ttk.Label(root, text="Excluded Genres (comma-separated):")
+excluded_genres_label = ttk.Label(root, text="Excluded Genres (csv):")
 excluded_genres_label.grid(row=5, column=0, padx=5, pady=5, sticky="w")
 excluded_genres_entry = ttk.Entry(root)
 excluded_genres_entry.grid(row=5, column=1, padx=5, pady=5)
@@ -71,7 +72,7 @@ excluded_genres_entry.grid(row=5, column=1, padx=5, pady=5)
 
 # Create a button to trigger the search
 search_button = ttk.Button(root, text="Search", command=search_movies)
-search_button.grid(row=6, column=0, columnspan=2, padx=5, pady=5)
+search_button.grid(row=6, column=1, columnspan=1, padx=5, pady=5)
 
 # Create a text widget to display the results
 result_text = tk.Text(root, width=50, height=10)

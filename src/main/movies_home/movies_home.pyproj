@@ -21,6 +21,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="engine.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="header.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="movies_home.py" />
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +39,9 @@
     <Content Include="data\moviesV4_0.owx" />
     <Content Include="data\moviesV4_0.rdf" />
     <Content Include="data\moviesV4_0.ttl" />
+    <Content Include="data\moviesV4_1.owx" />
+    <Content Include="data\moviesV4_1.rdf" />
+    <Content Include="data\moviesV4_1.ttl" />
     <Content Include="data\movieV3.owx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
