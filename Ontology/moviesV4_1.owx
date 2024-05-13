@@ -349,6 +349,10 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Genre"/>
+        <Class IRI="#Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Genre"/>
         <Class IRI="#Writer"/>
     </DisjointClasses>
     <DisjointClasses>
@@ -2141,10 +2145,6 @@
         <DataProperty IRI="#year"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
-    <DisjointDataProperties>
-        <DataProperty IRI="#country"/>
-        <DataProperty IRI="#language"/>
-    </DisjointDataProperties>
     <DisjointDataProperties>
         <DataProperty IRI="#gender"/>
     </DisjointDataProperties>

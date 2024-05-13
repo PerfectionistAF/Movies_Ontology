@@ -158,3 +158,35 @@ WHERE {
   ?movie ont:hasDirector ?actor .
 }
 
+___________________________________________________________________________________________________
+Test DESCRIBE query.
+___________________________________________________________________________________________________
+
+query =  """
+    DESCRIBE <http://www.semanticweb.org/dataset/ontologies/2024/4/moviesV1#Actor>
+    """
+ Execute the query and print results
+result = g.query(query)
+
+# Print the result in Turtle format
+print(result.serialize(format="turtle").decode())
+
+___________________________________________________________________________________________________
+Test ASK query.
+___________________________________________________________________________________________________
+
+query =  """
+    ASK
+WHERE {
+  ?movie rdf:type ont:Movie .
+  MINUS {
+    ?movie ont:hasGenre ?genre .
+    FILTER(?genre = "Comedy")
+  }
+}
+    """
+ #Execute the query and print results
+result = g.query(query) 
+
+ #Print the result in Turtle format
+print("Result:",result.askAnswer)
