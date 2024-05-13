@@ -86,6 +86,9 @@
         <NamedIndividual IRI="#Action"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Baby_Driver"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Boogie_Nights"/>
     </Declaration>
     <Declaration>
@@ -105,6 +108,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Drama"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Edgar_Wright"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Francis_Ford_Coppola"/>
@@ -150,6 +156,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Quentin_Tarantino"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Stephen_King"/>
@@ -352,6 +361,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Movie"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Movie"/>
         <NamedIndividual IRI="#Boogie_Nights"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -381,6 +394,18 @@
     <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#Drama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Actor"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Director"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Writer"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Director"/>
@@ -449,6 +474,10 @@
     <ClassAssertion>
         <Class IRI="#Writer"/>
         <NamedIndividual IRI="#Quentin_Tarantino"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Movie"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Writer"/>
@@ -524,6 +553,31 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActor"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDirector"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <NamedIndividual IRI="#Action"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <NamedIndividual IRI="#Thriller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWriter"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasActor"/>
         <NamedIndividual IRI="#Boogie_Nights"/>
         <NamedIndividual IRI="#Paul_Thomas_Anderson"/>
     </ObjectPropertyAssertion>
@@ -636,6 +690,36 @@
         <ObjectProperty IRI="#isGenreOf"/>
         <NamedIndividual IRI="#Drama"/>
         <NamedIndividual IRI="#The_Shawshank_Redemption"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActorOf"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActorOf"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isDirectorOf"/>
@@ -851,6 +935,26 @@
         <ObjectProperty IRI="#isWriterOf"/>
         <NamedIndividual IRI="#Quentin_Tarantino"/>
         <NamedIndividual IRI="#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasActor"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDirector"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <NamedIndividual IRI="#Comedy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWriter"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isWriterOf"/>
@@ -1059,6 +1163,26 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <Literal>United Kingdom</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#language"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <Literal>English</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <Literal>Baby Driver</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Baby_Driver"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2017</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
         <NamedIndividual IRI="#Boogie_Nights"/>
         <Literal>USA</Literal>
     </DataPropertyAssertion>
@@ -1151,6 +1275,26 @@
         <DataProperty IRI="#genre"/>
         <NamedIndividual IRI="#Drama"/>
         <Literal>Drama</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">48</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <Literal>Edgar Wright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#Edgar_Wright"/>
+        <Literal>British</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
@@ -1451,6 +1595,26 @@
         <DataProperty IRI="#nationality"/>
         <NamedIndividual IRI="#Quentin_Tarantino"/>
         <Literal>American</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <Literal>United Kingdom</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#language"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <Literal>English</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <Literal>Shaun Of The Dead</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Shaun_Of_The_Dead"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2004</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#age"/>
