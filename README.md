@@ -6,35 +6,35 @@
 
 **1) Class:** 
 
-a) Movie: defines basic Movie class
-b) Genre: defines basic Genre class 
-c) Person: defines basic Person class
-d) Actor: basic Actor class is a subclass of Person class
-e) Writer: basic Writer class is a subclass of Person
-f) Director: basic Director class is a subclass of Person
+a) Movie: defines basic Movie class<br>
+b) Genre: defines basic Genre class<br> 
+c) Person: defines basic Person class<br>
+d) Actor: basic Actor class is a subclass of Person class<br>
+e) Writer: basic Writer class is a subclass of Person<br>
+f) Director: basic Director class is a subclass of Person<br>
 
 **2) Object Property:**
 
-a) hasGenre: Each Movie has one or more instances of class Genre
-b) hasActor: Each Movie has at least one instance of class Actor 
-c) hasWriter: Each Movie has at least one instance of class Writer
-d) hasDirector: Each Movie has at least one instance of class Director
-e) isGenreOf: Inverse of hasGenre
-f) isActorOf: Inverse of hasActor
-g) isDirectorOf: Inverse of hasDirector
-h) isWriterOf: Inverse of hasWriter
+a) hasGenre: Each Movie has one or more instances of class Genre<br>
+b) hasActor: Each Movie has at least one instance of class Actor<br>
+c) hasWriter: Each Movie has at least one instance of class Writer<br>
+d) hasDirector: Each Movie has at least one instance of class Director<br>
+e) isGenreOf: Inverse of hasGenre<br>
+f) isActorOf: Inverse of hasActor<br>
+g) isDirectorOf: Inverse of hasDirector<br>
+h) isWriterOf: Inverse of hasWriter<br>
 
 **3) Data Property:**
 
-a) name: Name of Person
-b) age: Age of Person
-c) nationality: Nationality(s) of Person
-d) gender: Gender of Person
-e) genre: Genre(s) of Movie
-f) title: Title of Movie
-g) country: Country(s) of Production of Movie
-h) language: Language(s) of Movie
-i) year: Year of Copyright of Movi
+a) name: Name of Person<br>
+b) age: Age of Person<br>
+c) nationality: Nationality(s) of Person<br>
+d) gender: Gender of Person<br>
+e) genre: Genre(s) of Movie<br>
+f) title: Title of Movie<br>
+g) country: Country(s) of Production of Movie<br>
+h) language: Language(s) of Movie<br>
+i) year: Year of Copyright of Movie<br>
 
 ## Person Instances on OntoGraf
 
@@ -85,9 +85,9 @@ python engine.py
 python movies_home.py
 ```
 
-***header.py***: global SPARQL query pattern
-***engine.py***: global SPARQL finding function
-***movies_home.py***: generate main interface and results
+***header.py***: global SPARQL query pattern<br>
+***engine.py***: global SPARQL finding function<br>
+***movies_home.py***: generate main interface and results<br>
 
 ## Testing
 
