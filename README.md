@@ -40,15 +40,15 @@ i) year: Year of Copyright of Movie<br>
 
 ![image](https://github.com/PerfectionistAF/Movies_Ontology/assets/77901496/f43cada2-bdf0-4766-a2b3-8f6c9217b9b1)
 
-a) Actors
+### a) Actors
 
 ![image](https://github.com/PerfectionistAF/Movies_Ontology/assets/77901496/d56f66db-90da-4d75-9264-bb5af8920ef4)
 
-b) Directors
+### b) Directors
 
 ![image](https://github.com/PerfectionistAF/Movies_Ontology/assets/77901496/835b19ca-b752-4b42-a137-f6c9c51db2a9)
 
-c) Writers
+### c) Writers
 
 ![image](https://github.com/PerfectionistAF/Movies_Ontology/assets/77901496/df454305-8bbe-49cd-b9ca-65a572be7a40)
 
