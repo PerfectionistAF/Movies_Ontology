@@ -7,53 +7,33 @@
 **1) Class:** 
 
 a) Movie: defines basic Movie class
-
 b) Genre: defines basic Genre class 
-
 c) Person: defines basic Person class
-
 d) Actor: basic Actor class is a subclass of Person class
-
 e) Writer: basic Writer class is a subclass of Person
-
 f) Director: basic Director class is a subclass of Person
 
 **2) Object Property:**
 
 a) hasGenre: Each Movie has one or more instances of class Genre
-
 b) hasActor: Each Movie has at least one instance of class Actor 
-
 c) hasWriter: Each Movie has at least one instance of class Writer
-
 d) hasDirector: Each Movie has at least one instance of class Director
-
 e) isGenreOf: Inverse of hasGenre
-
 f) isActorOf: Inverse of hasActor
-
 g) isDirectorOf: Inverse of hasDirector
-
 h) isWriterOf: Inverse of hasWriter
 
 **3) Data Property:**
 
 a) name: Name of Person
-
 b) age: Age of Person
-
 c) nationality: Nationality(s) of Person
-
 d) gender: Gender of Person
-
 e) genre: Genre(s) of Movie
-
 f) title: Title of Movie
-
 g) country: Country(s) of Production of Movie
-
 h) language: Language(s) of Movie
-
 i) year: Year of Copyright of Movi
 
 ## Person Instances on OntoGraf
@@ -105,11 +85,8 @@ python engine.py
 python movies_home.py
 ```
 
-
 ***header.py***: global SPARQL query pattern
-
 ***engine.py***: global SPARQL finding function
-
 ***movies_home.py***: generate main interface and results
 
 ## Testing
