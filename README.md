@@ -1,5 +1,11 @@
 # Movies_Ontology
 
+This project models an ontology of movies. Protégé Editor was used to create this ontology of movies. Basically, we aim to create a blueprint 
+for the online referencing and storage of movie datasets. This ontology will be used to model a python desktop application to reason querying 
+and selecting movies according to the required included and excluded individuals. This work is divided into sections corresponding to the 
+given project description. Part I models the ontology, Part II populates the ontology and checks for consistency, Part III performs SPARQL 
+queries, Part IV uses Jena and rdflib to test SPARQL queries and finally, Part V focuses on a user-friendly interface to query the ontology.
+
 ## Overview and Description of Ontology
 
 ![image](https://github.com/PerfectionistAF/Movies_Ontology/assets/77901496/5fda46d8-0092-40c0-a623-29927487d4eb)
