@@ -84,7 +84,7 @@ By default, the endpoint at http://localhost:3000/sparql
 
 ## Installation and Running
 
-Install the code from : https://github.com/PerfectionistAF/Movies_Ontology/src/main 
+Install the code from : [https://github.com/PerfectionistAF/Movies_Ontology/src/main ](https://github.com/PerfectionistAF/Movies_Ontology/tree/main/src/main/movies_home)
 ```bash
 python header.py
 python engine.py
