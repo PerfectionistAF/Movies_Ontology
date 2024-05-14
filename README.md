@@ -67,7 +67,7 @@ pip install rdflib
 ```
 ### Node.js
 
-Use the npm [npm](https://docs.npmjs.com/cli/v10/commands/npm-install) to install the following:
+Use the node package manager [npm](https://docs.npmjs.com/cli/v10/commands/npm-install) to install the following:
 ```bash
 npm install -g @comunica/query-sparql
 ```
